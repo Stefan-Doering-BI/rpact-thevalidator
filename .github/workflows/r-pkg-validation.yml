@@ -1,10 +1,10 @@
 name: Test This Action
 
 on:
-  workflow_dispatch:
-  push:
-  issues:
-    types: [opened]
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # This allows the workflow to be manually triggered
 
 jobs:
   test:
